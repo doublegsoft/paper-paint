@@ -14,5 +14,5 @@ paper-paint
 ## Build
 
 ```
-
+npm run build:fast
 ```
