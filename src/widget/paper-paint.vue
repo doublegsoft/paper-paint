@@ -8,21 +8,21 @@
 **
 */
 <template>
-<div class="display:flex;">
+<div class="display:flex;width:100%;">
   <div style="width:200px;"></div>
-  <div style="width:calc(100% - 200px);overflow: auto;" ref="refPaperContainer">
+  <div style="width:calc(100% - 0px);overflow: auto;" ref="refPaperContainer">
   </div>
 </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { PP } from "@/type/pp_a4paper";
+import { A4Paper } from "@/type/pp_a4paper";
 
 const refPaperContainer = ref<HTMLDivElement | null>(null);
 
 onMounted(() => {
-  const a4 = new PP.A4Paper(refPaperContainer.value);
+  const a4 = new A4Paper(refPaperContainer.value);
   refPaperContainer.value.appendChild(a4.getCanvas());
   a4.drawText("中文", 10, 10);
 });

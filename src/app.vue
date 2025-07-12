@@ -16,7 +16,7 @@ import PaperPaint from './widget/paper-paint.vue';
   <header>
     <h1>Paper Paint</h1>
   </header>
-  <main>
+  <main style="width:100%;max-width: unset;">
     <PaperPaint />
   </main>
 </template>

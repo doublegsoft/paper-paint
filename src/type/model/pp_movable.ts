@@ -7,7 +7,7 @@
 ** |_|         |_|                  |_|      
 **                
 */
-namespace PP {
+export namespace PP {
 
 export interface Movable {
 
