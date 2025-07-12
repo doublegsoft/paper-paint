@@ -3,16 +3,26 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:fast": "esbuild src/**/*.ts --outdir=dist --platform=node --format=cjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "vue": "^3.5.17",
+    "vue-tsc": "^3.0.1"
+  },
   "devDependencies": {
     "@types/node": "^24.0.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "esbuild": "^0.25.5",
-    "typescript": "^5.8.3"
+    "lite-server": "^2.6.1",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-vue-devtools": "^7.7.7"
   }
 }
