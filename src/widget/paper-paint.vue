@@ -17,13 +17,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { A4Paper } from "@/type/pp_a4paper";
+import { A4Paper } from "../type/pp_a4paper";
 
 const refPaperContainer = ref<HTMLDivElement | null>(null);
 
 onMounted(() => {
-  const a4 = new A4Paper(refPaperContainer.value);
-  refPaperContainer.value.appendChild(a4.getCanvas());
+  const a4 = new A4Paper();
+  if (refPaperContainer.value != null) {
+    refPaperContainer.value.appendChild(a4.getCanvas());
+  }
   a4.drawText("中文", 10, 10);
 });
 

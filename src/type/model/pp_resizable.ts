@@ -7,16 +7,10 @@
 ** |_|         |_|                  |_|      
 **                
 */
-
-namespace PP {
-
 export interface Resizable {
 
   width: number;
 
   height: number;
-
-}
-
 
 }

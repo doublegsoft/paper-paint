@@ -7,14 +7,10 @@
 ** |_|         |_|                  |_|      
 **                
 */
-export namespace PP {
-
 export interface Movable {
 
   x: number;
 
   y: number;
-
-};
 
 };
